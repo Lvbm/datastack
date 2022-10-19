@@ -24,7 +24,7 @@
 
     <property name="charset" value="UTF-8"/>
 
-    <property name="severity" value="error"/>
+    <property name="severity" value="info"/>
 
     <property name="fileExtensions" value="java, properties, xml"/>
 
@@ -34,20 +34,18 @@
         <!-- Checks that TODOs don't have stuff in parenthesis, e.g., username. -->
         <property name="format" value="((//.*)|(\*.*))TODO\("/>
         <property name="message" value="TODO comments must not include usernames."/>
-        <property name="severity" value="error"/>
+
     </module>
 
     <module name="RegexpSingleline">
         <!-- \s matches whitespace character, $ matches end of line. -->
         <property name="format" value="\s+$"/>
-        <property name="severity" value="error"/>
         <property name="message" value="No trailing whitespace allowed."/>
     </module>
 
     <module name="RegexpSingleline">
         <property name="format" value="Throwables.propagate\("/>
         <property name="message" value="Throwables.propagate is deprecated"/>
-        <property name="severity" value="error"/>
     </module>
 
     <module name="FileLength">
@@ -58,7 +56,6 @@
     <module name="TreeWalker">
         <module name="SuppressWarningsHolder"/>
         <module name="ImportOrder">
-            <property name="severity" value="error"/>
             <property name="staticGroups" value="org.apache.datastack,org.apache.datastack.shade,*,javax,java,scala"/>
             <property name="groups" value="org.apache.datastack,org.apache.datastack.shade,*,javax,java,scala"/>
             <property name="separated" value="true"/>
@@ -133,25 +130,23 @@
         </module>
 
         <module name="OuterTypeFilename">
-            <property name="severity" value="error"/>
+
         </module>
 
         <module name="OneTopLevelClass">
-            <property name="severity" value="error"/>
+
         </module>
 
         <module name="NoLineWrap">
-            <property name="severity" value="error"/>
+
         </module>
 
         <!-- Checks for braces around if and else blocks -->
         <module name="NeedBraces">
-            <property name="severity" value="error"/>
             <property name="tokens" value="LITERAL_IF, LITERAL_ELSE, LITERAL_FOR, LITERAL_WHILE, LITERAL_DO"/>
         </module>
 
         <module name="LeftCurly">
-            <property name="severity" value="error"/>
         </module>
 
         <module name="IllegalTokenText">
@@ -200,7 +195,7 @@
             -->
             <property name="reliefPattern"
                       value="fall through|Fall through|fallthru|Fallthru|falls through|Falls through|fallthrough|Fallthrough|No break|NO break|no break|continue on"/>
-            <property name="severity" value="error"/>
+
         </module>
 
         <!-- MODIFIERS CHECKS -->
@@ -210,7 +205,7 @@
                  public, protected, private, abstract, static, final, transient, volatile,
                  synchronized, native, strictfp
               -->
-            <property name="severity" value="error"/>
+
         </module>
 
         <module name="SeparatorWrap">
@@ -224,14 +219,14 @@
         </module>
 
         <module name="UnusedImports">
-            <property name="severity" value="error"/>
+
             <property name="processJavadoc" value="true"/>
             <message key="import.unused" value="Unused import: {0}."/>
         </module>
 
         <module name="RedundantImport">
             <!-- Checks for redundant import statements. -->
-            <property name="severity" value="error"/>
+
             <message key="import.redundancy" value="Redundant import {0}."/>
         </module>
 
@@ -275,13 +270,13 @@
         <module name="DefaultComesLast"/>
         <!--Detects empty statements (standalone ";" semicolon)-->
         <module name="EmptyStatement">
-            <property name="severity" value="error"/>
+
         </module>
 
         <!--Checks that long constants are defined with an upper ell-->
         <module name="UpperEll">
             <!-- Checks that long constants are defined with an upper ell.-->
-            <property name="severity" value="error"/>
+
         </module>
 
         <module name="ConstantName">
@@ -293,14 +288,14 @@
             <!-- Validates identifiers for local variables against the expression "^[a-z][a-zA-Z0-9]*$". -->
             <property name="tokens" value="VARIABLE_DEF"/>
             <property name="format" value="^[a-z]([a-zA-Z0-9]*)?$"/>
-            <property name="severity" value="error"/>
+
             <message key="name.invalidPattern" value="Local variable name ''{0}'' must match pattern ''{1}''."/>
         </module>
 
         <!--Validates identifiers for local, final variables, including catch parameters-->
         <module name="LocalFinalVariableName">
             <!-- Validates identifiers for local final variables against the expression "^[a-z][a-zA-Z0-9]*$". -->
-            <property name="severity" value="error"/>
+
         </module>
 
         <!--Validates identifiers for non-static fields-->
@@ -317,7 +312,7 @@
 
         <module name="PackageName">
             <property name="format" value="^[a-z]+(\.[a-z][a-z0-9]{1,})*$"/>
-            <property name="severity" value="error"/>
+
         </module>
 
         <module name="ConstantNameCheck">
@@ -330,7 +325,7 @@
             <property name="format" value="^([A-Z][A-Z0-9]*(_[A-Z0-9]+)*|FLAG_.*)$"/>
             <message key="name.invalidPattern"
                      value="Variable ''{0}'' should be in ALL_CAPS (if it is a constant) or be private (otherwise)."/>
-            <property name="severity" value="error"/>
+
         </module>
 
         <module name="MemberNameCheck">
@@ -341,14 +336,14 @@
             <property name="applyToPackage" value="true"/>
             <property name="applyToPrivate" value="true"/>
             <property name="format" value="^[a-z][a-zA-Z0-9]*$"/>
-            <property name="severity" value="error"/>
+
         </module>
 
         <module name="MethodNameCheck">
             <!-- Validates identifiers for method names. -->
             <metadata name="altname" value="MethodName"/>
             <property name="format" value="^[a-z][a-zA-Z0-9]*(_[a-zA-Z0-9]+)*$"/>
-            <property name="severity" value="error"/>
+
         </module>
 
         <module name="MethodName">
@@ -365,7 +360,7 @@
         <module name="ParameterName">
             <!-- Validates identifiers for method parameters against the expression "^[a-z][a-zA-Z0-9]*$". -->
             <property name="format" value="^[a-z]([a-zA-Z0-9]*)?$"/>
-            <property name="severity" value="error"/>
+
             <message key="name.invalidPattern" value="Parameter name ''{0}'' must match pattern ''{1}''."/>
         </module>
 
@@ -382,13 +377,13 @@
             <property name="applyToPackage" value="true"/>
             <property name="applyToPrivate" value="true"/>
             <property name="format" value="^[a-z]([a-zA-Z0-9]*)?$"/>
-            <property name="severity" value="error"/>
+
         </module>
 
         <module name="TypeNameCheck">
             <!-- Validates static, final fields against the expression "^[A-Z][a-zA-Z0-9]*$". -->
             <metadata name="altname" value="TypeName"/>
-            <property name="severity" value="error"/>
+
         </module>
 
         <module name="TypeName">
@@ -422,7 +417,7 @@
             -->
             <property name="tokens" value="BNOT, DEC, DOT, INC, LNOT, UNARY_MINUS, UNARY_PLUS"/>
             <property name="allowLineBreaks" value="true"/>
-            <property name="severity" value="error"/>
+
         </module>
 
         <module name="WhitespaceAfter">
@@ -441,7 +436,7 @@
             <property name="allowEmptyMethods" value="true"/>
             <property name="allowEmptyTypes" value="true"/>
             <property name="allowEmptyLoops" value="true"/>
-            <property name="severity" value="error"/>
+
             <property name="tokens" value="ASSIGN, BAND, BAND_ASSIGN, BOR,
         BOR_ASSIGN, BSR, BSR_ASSIGN, BXOR, BXOR_ASSIGN, COLON, DIV, DIV_ASSIGN,
         EQUAL, GE, GT, LAMBDA, LAND, LE, LITERAL_CATCH, LITERAL_DO, LITERAL_ELSE,
@@ -457,14 +452,14 @@
         <module name="MethodParamPad"/>
         <module name="ParenPad">
             <!-- Checks that there is no whitespace before close parens or after open parens. -->
-            <property name="severity" value="error"/>
+
         </module>
 
         <module name="NoWhitespaceBefore">
             <!-- Checks that there is no whitespace before various unary operators. Linebreaks are allowed. -->
             <property name="tokens" value="COMMA, SEMI, DOT, POST_DEC, POST_INC, ELLIPSIS, METHOD_REF"/>
             <property name="allowLineBreaks" value="true"/>
-            <property name="severity" value="error"/>
+
         </module>
 
         <module name="OperatorWrap">
