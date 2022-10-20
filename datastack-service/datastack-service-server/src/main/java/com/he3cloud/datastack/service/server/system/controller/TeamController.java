@@ -32,6 +32,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 
@@ -41,7 +42,7 @@ import javax.validation.constraints.NotBlank;
 @RequestMapping("team")
 public class TeamController {
 
-    @Autowired
+    @Resource
     private TeamService teamService;
 
     @PostMapping("list")

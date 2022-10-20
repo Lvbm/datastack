@@ -50,9 +50,20 @@ public class SwaggerConfig implements WebMvcConfigurer {
     public Docket createRestApi() {
         List<Parameter> pars = new ArrayList<Parameter>();
         ParameterBuilder tokenPar = new ParameterBuilder();
-        tokenPar.name("Authorization").description("accessToken").modelRef(new ModelRef("string")).parameterType("header").required(true).build();
+        tokenPar
+            .name("Authorization")
+            .description("accessToken")
+            .modelRef(new ModelRef("string"))
+            .parameterType("header")
+            .required(true)
+            .build();
         pars.add(tokenPar.build());
-        return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo()).select().apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class)).paths(PathSelectors.any()).build().globalOperationParameters(pars);
+
+        return new Docket(DocumentationType.SWAGGER_2)
+            .apiInfo(apiInfo()).select()
+            .apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))
+            .paths(PathSelectors.any()).build()
+            .globalOperationParameters(pars);
     }
 
     private ApiInfo apiInfo() {
