@@ -1,7 +1,7 @@
 
 ## Introduction
 
-DataLakeStudio is a big data ide platform, is designed for Data Lake & Data Warehouse.
+DataLakeStudio is a big data ide platform, designed for Data Lake & Data Warehouse.
 
 ## Features
 

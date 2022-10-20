@@ -10,8 +10,7 @@
     "build:preview": "vue-cli-service build --no-module --mode preview",
     "lint:nofix": "vue-cli-service lint --no-fix",
     "lint:js": "eslint src/**/*.js --fix",
-    "lint:css": "stylelint src/**/*.*ss --fix  --custom-syntax postcss-less",
-    "prepare": "husky install"
+    "lint:css": "stylelint src/**/*.*ss --fix  --custom-syntax postcss-less"
   },
   "dependencies": {
     "@ant-design-vue/pro-layout": "^1.0.12",
@@ -84,11 +83,6 @@
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "gitHooks": {
