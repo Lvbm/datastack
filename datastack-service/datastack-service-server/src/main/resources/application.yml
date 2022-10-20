@@ -44,7 +44,7 @@ spring:
 
 # mybatis plus setting
 mybatis-plus:
-  type-aliases-package: org.apache.datastack.console.*.entity
+  type-aliases-package: com.he3cloud.datastack.service.server.*.entity
   mapper-locations: classpath:mapper/*/*.xml
   configuration:
     jdbc-type-for-null: null
