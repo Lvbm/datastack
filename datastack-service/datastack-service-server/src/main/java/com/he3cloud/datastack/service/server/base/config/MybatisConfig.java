@@ -23,9 +23,6 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-/**
- * for MyBatis Configure management.
- */
 @Configuration
 @MapperScan(value = {"com.he3cloud.datastack.service.server.*.mapper"})
 public class MybatisConfig {
