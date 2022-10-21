@@ -18,3 +18,5 @@ DataLakeStudio is a big data ide platform, designed for Data Lake & Data Warehou
 The community welcomes everyone to contribute, please refer to this page to find out more.
 
 ## License
+
+[Apache 2.0 License.](LICENSE)
